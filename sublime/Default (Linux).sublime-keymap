@@ -1,0 +1,183 @@
+[
+// Toggle fix linux
+    {   
+        "keys": ["ctrl+shift+7"],
+        "command": "toggle_comment",
+        "args": { "block": true }
+    },
+
+// Special Layout
+    {
+        "keys": ["alt+shift+3"],
+        "command": "set_layout",
+        "args":
+            {
+                "cols": [0.0, 0.5, 1.0],
+                "rows": [0.0, 0.5, 1.0],
+                "cells":
+                    [
+                        [0, 0, 1, 2],
+                        [1, 0, 2, 1],
+                        [1, 1, 2, 2]
+                    ]
+            }
+
+    },
+
+    
+// Personal short keys
+    {
+        "keys": ["ctrl+shift+s"],
+        "command": "repl_transfer_current",
+        "args": {"scope": "selection"}
+    },
+    {
+        "keys": ["ctrl+shift+f"],
+        "command": "repl_transfer_current",
+        "args": {"scope": "file"}
+    },
+    {
+        "keys": ["ctrl+shift+l"],
+        "command": "repl_transfer_current",
+        "args": {"scope": "lines"}
+    },
+    {
+        "keys": ["ctrl+shift+m"],
+        "command": "find_all_under"
+    },
+
+
+// Python REPL (local python environment)
+    {
+        "keys": ["ctrl+shift+p"],
+        "command": "repl_open",
+        "caption": "Python Local",
+        "id": "repl_python",
+        "mnemonic": "p",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "cmd": ["/home/mhrose/.virtualenvs/tf2play/bin/python", "-i", "-u"],
+                "cwd": "$file_path",
+                "syntax": "Packages/Python/Python.tmLanguage",
+                "external_id": "python"
+            }
+    },
+
+
+    // Python REPL (local python environment)
+    {
+        "keys": ["ctrl+shift+i"],
+        "command": "repl_open",
+        "caption": "Python Local",
+        "id": "repl_python",
+        "mnemonic": "p",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "cmd": ["/home/mhrose/.virtualenvs/infofilter/bin/python", "-i", "-u"],
+                "cwd": "$file_path",
+                "syntax": "Packages/Python/Python.tmLanguage",
+                "external_id": "python"
+            }
+    },
+
+
+// Python REPL (ssh to vm on ip xxx)
+    {
+        "keys": ["ctrl+shift+v"],
+        "command": "repl_open",
+        "caption": "Python Cloud",
+        "id": "repl_python",
+        "mnemonic": "p",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "cmd": ["ssh", "-Y", "devm", "/home/mro/.virtualenvs/tf2play/bin/python", "-i"],
+                "cwd": "$file_path",
+                "syntax": "Packages/Python/Python.tmLanguage",
+                "external_id": "python"
+            }
+    },
+
+// Python REPL (local gans)
+    {
+        "keys": ["ctrl+shift+w"],
+        "command": "repl_open",
+        "caption": "Python Local",
+        "id": "repl_python",
+        "mnemonic": "p",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "cmd": ["/home/mro/.virtualenvs/gans/bin/python", "-i", "-u"],
+                "cwd": "$file_path",
+                "syntax": "Packages/Python/Python.tmLanguage",
+                "external_id": "python"
+            }
+    },
+
+
+/*// Python REPL (kaps in prod)
+    {
+        "keys": ["ctrl+shift+k"],
+        "command": "repl_open",
+        "caption": "Python Cloud",
+        "id": "repl_python",
+        "mnemonic": "p",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "cmd": ["ssh", "-Y", "kapsvm", "/home/mro/.virtualenvs/dolores/bin/python", "-i"],
+                "cwd": "$file_path",
+                "syntax": "Packages/Python/Python.tmLanguage",
+                "external_id": "python"
+            }
+    },*/
+
+
+// Python REPL (kaps dev)
+    {
+        "keys": ["ctrl+shift+k"],
+        "command": "repl_open",
+        "caption": "Python Cloud",
+        "id": "repl_python",
+        "mnemonic": "p",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "cmd": ["ssh", "-Y", "doloresdev", "/home/mro/.virtualenvs/dev/bin/python", "-i"],
+                "cwd": "$file_path",
+                "syntax": "Packages/Python/Python.tmLanguage",
+                "external_id": "python"
+            }
+    },
+
+
+// R REPL
+    {
+        "keys": ["ctrl+shift+r"],
+        "command": "repl_open",
+        "caption": "R Local",
+        "id": "repl_r",
+        "mnemonic": "r",
+        "args":
+            {
+                "type": "subprocess",
+                "encoding": "utf8",
+                "soft_quit": "\nquit(save=\"no\")\n",
+                "cmd": ["R", "--interactive", "--no-readline"],
+                "cwd": "$file_path",
+                "cmd_postfix": "\n",
+                "suppress_echo": true,
+                "syntax": "Packages/R/R Console.tmLanguage",
+            "external_id": "r"
+            }
+    }
+]

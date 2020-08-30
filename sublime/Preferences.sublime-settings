@@ -1,0 +1,19 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"font_face": "Roboto Regular",
+/*	"font_face": "Source Code Pro",*/
+	"highlight_line": true,
+    "highlight_modified_tabs": true,
+	"font_size": 18,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+    "line_padding_top": 2,
+    "tab_size": 4,
+	"scroll_past_end": true,
+	"theme": "Material-Theme.sublime-theme",
+	"word_wrap": true,
+	"trim_trailing_white_space_on_save": true
+}

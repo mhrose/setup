@@ -1,0 +1,53 @@
+<snippet>
+	<content><![CDATA[
+// @mhrose
+
+
+digraph dataflow {
+	
+	rankdir="LR"
+	nodesep=0.5
+	ranksep=0.4
+	compound=true
+	concentrate=false	
+
+// set defaults - keep minimum variation for good graphs
+
+	node [fontcolor=black, fontsize=11, fontname=Helvitica, shape=box, color=black]
+	node [style=filled, fillcolor=whitesmoke]
+	edge [style=solid, color=grey35]
+	labelloc="top"
+	labeljust="left"
+
+
+// Graphs
+
+	subgraph cluster_one {
+		labelloc="bottom"
+		labeljust="right"
+		label="label"
+		"A"->"B"
+		"B"->"C"
+	}
+
+	subgraph cluster_two {
+		labelloc="bottom"
+		labeljust="right"
+		label="label"
+		"D"->"E"
+	}
+
+	edge [style=dashed, color=grey35]
+	"C"->"D"
+	"D"->"A"[ltail=cluster_two, label="some lable", lhead=cluster_one]
+
+	labelloc="top"
+	labeljust="left"
+	label="Topic"
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dot</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
