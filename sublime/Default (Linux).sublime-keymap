@@ -1,6 +1,6 @@
 [
 // Toggle fix linux
-    {   
+    {
         "keys": ["ctrl+shift+7"],
         "command": "toggle_comment",
         "args": { "block": true }
@@ -24,7 +24,7 @@
 
     },
 
-    
+
 // Personal short keys
     {
         "keys": ["ctrl+shift+s"],
@@ -44,6 +44,16 @@
     {
         "keys": ["ctrl+shift+m"],
         "command": "find_all_under"
+    },
+    {
+        "keys": ["ctrl+alt+left"],
+        "command": "move_to",
+        "args": {"to": "bol", "extend": false}
+    },
+    {
+        "keys": ["ctrl+alt+right"],
+        "command": "move_to",
+        "args": {"to": "eol", "extend": false}
     },
 
 
@@ -68,7 +78,7 @@
 
     // Python REPL (local python environment)
     {
-        "keys": ["ctrl+shift+i"],
+        "keys": ["ctrl+shift+d"],
         "command": "repl_open",
         "caption": "Python Local",
         "id": "repl_python",
@@ -77,7 +87,7 @@
             {
                 "type": "subprocess",
                 "encoding": "utf8",
-                "cmd": ["/home/mhrose/.virtualenvs/infofilter/bin/python", "-i", "-u"],
+                "cmd": ["/home/mhrose/.virtualenvs/magnus-xls/bin/python", "-i", "-u"],
                 "cwd": "$file_path",
                 "syntax": "Packages/Python/Python.tmLanguage",
                 "external_id": "python"
@@ -103,7 +113,7 @@
             }
     },
 
-// Python REPL (local gans)
+// Python REPL (VM ct datapipoeline)
     {
         "keys": ["ctrl+shift+w"],
         "command": "repl_open",
@@ -114,7 +124,7 @@
             {
                 "type": "subprocess",
                 "encoding": "utf8",
-                "cmd": ["/home/mro/.virtualenvs/gans/bin/python", "-i", "-u"],
+                "cmd": ["ssh", "-Y", "ctpipeline", "/home/mro/.virtualenvs/ct-management-dashboard/bin/python", "-i"],
                 "cwd": "$file_path",
                 "syntax": "Packages/Python/Python.tmLanguage",
                 "external_id": "python"

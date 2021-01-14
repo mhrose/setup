@@ -1,19 +1,26 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"font_face": "Roboto Regular",
-/*	"font_face": "Source Code Pro",*/
-	"highlight_line": true,
-    "highlight_modified_tabs": true,
-	"font_size": 18,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": "\\",
+			"selector": "text.tex.latex"
+		}
+	],
+	"font_size": 15,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"line_padding_bottom": 2,
-    "line_padding_top": 2,
-    "tab_size": 4,
 	"scroll_past_end": true,
+	"tab_size": 4,
 	"theme": "Material-Theme.sublime-theme",
-	"word_wrap": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }

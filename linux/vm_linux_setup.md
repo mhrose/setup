@@ -16,12 +16,25 @@ sudo apt install xauth
 ```
 
 
-### Install terminator, zsh and configure with Oh My ZSH
+### Install terminator, sublime, zsh and configure with Oh My ZSH
 ```bash
-pacman -S zsh
-echo $SHELL
-chsh -s $(which zsh)
-restart shell
+sudo apt-get install zsh
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+
+### remember (if needed)
+- .gitconfig
+- ./ssh
+
+### add to .zshrc (zsh customization)
+```bash
+ZSH_THEME="bureau"
+
+plugins=(
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+)
 ```
 
 ### check
