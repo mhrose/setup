@@ -1,24 +1,27 @@
 # My VM Linux Setup *Notes*
 
 
-### WIP setup vm: Deian 9
+### WIP setup vm: Deian 10
 
 ### update and install
 
 ```bash
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install python3-pip
-sudo apt install python3
+python3 -V # check default version (time of these notes 3.7)
+# sudo apt install python3.x
 sudo apt install virtualenv
 sudo pip3 install virtualenvwrapper
 sudo apt install python3-tk
 sudo apt install xauth
+sudo apt install git
+sudo apt install wget
 ```
 
 
 ### Install terminator, sublime, zsh and configure with Oh My ZSH
 ```bash
-sudo apt-get install zsh
+sudo apt install zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
@@ -45,7 +48,6 @@ sudo find / -name virtualenvwrapper.sh
 ### add to .bashrc or / .zshrc
 ```bash
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/projects
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 ```
@@ -79,5 +81,5 @@ https://docs.docker.com/engine/install/debian/
 
 ### Add to .ssh
 - add config; user
-- add ssh-keys (in GCP, use default ssh-key naming for repo-conect)
+- add ssh-keys (in GCP, use default ssh-key naming for repo-connect)
 - set rw permission for ssh-keys
